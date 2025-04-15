@@ -19,7 +19,7 @@ const BlueUnderline = ({ children, className }: BlueUnderlineProps) => {
 
   return (
     <div className="relative inline-block">
-      <span ref={ref} className={`inline-block mb-1 ${className}`}>
+      <span ref={ref} className={`inline-block lg:mb-1 ${className}`}>
         {children}
       </span>
       {width > 0 && (
@@ -35,7 +35,7 @@ const BlueUnderline = ({ children, className }: BlueUnderlineProps) => {
               width - 1
             } 1.6`}
             stroke="#4361EE"
-            strokeWidth="3"
+            strokeWidth="4"
             strokeLinecap="round"
           />
         </svg>

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, MotionProvider } from "@/constants/MotionProvider";
 import { navLinks } from "@/constants";
 
 type MobileNavProps = {
@@ -46,7 +46,7 @@ export default function MobileNav({
   }, [isOpen]);
 
   return (
-    <>
+    <MotionProvider>
       {/* Mobile menu overlay */}
       {isOpen && (
         <div
@@ -69,7 +69,7 @@ export default function MobileNav({
                 {navLinks.map((link) => {
                   const isActive = activeSection === link.href.slice(1);
                   return (
-                    <li key={link.href}>
+                    <li key={link.id}>
                       <Link
                         href={link.href}
                         onClick={(e) => handleLinkClick(e, link.href)}
@@ -89,6 +89,6 @@ export default function MobileNav({
           </div>
         </div>
       </motion.div>
-    </>
+    </MotionProvider>
   );
 }

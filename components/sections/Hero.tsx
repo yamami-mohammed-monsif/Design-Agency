@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Button from "../UI/Button";
 import Section from "../UI/Section";
-import { LazyMotion, domAnimation, m as motion } from "motion/react";
+import { motion, MotionProvider } from "@/constants/MotionProvider";
 import { fadeInUp, staggerContainer } from "../../constants/animations";
 import BlueUnderline from "../UI/BlueUnderline";
 
@@ -13,7 +13,7 @@ export default function HeroSection() {
       id="home"
       className="mt-[92px] md:mt-[92px] lg:mt-[102px] bg-light-blue"
     >
-      <LazyMotion features={domAnimation}>
+      <MotionProvider>
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -55,7 +55,7 @@ export default function HeroSection() {
             </div>
           </motion.div>
         </motion.div>
-      </LazyMotion>
+      </MotionProvider>
     </Section>
   );
 }

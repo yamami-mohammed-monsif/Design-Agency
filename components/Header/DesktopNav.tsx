@@ -29,7 +29,7 @@ export default function DesktopNav({
         const isActive = activeSection === link.href.slice(1);
         return (
           <Link
-            key={link.href}
+            key={link.id}
             href={link.href}
             onClick={(e) => handleScrollToSection(e, link.href)}
             className={`text-[18px] font-medium transition-all duration-200 hover:text-primary-blue hover:scale-110 ${
