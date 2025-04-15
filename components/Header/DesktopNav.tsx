@@ -32,7 +32,7 @@ export default function DesktopNav({
             key={link.href}
             href={link.href}
             onClick={(e) => handleScrollToSection(e, link.href)}
-            className={`text-base font-medium transition-all duration-200 hover:text-primary-blue hover:scale-110 ${
+            className={`text-[18px] font-medium transition-all duration-200 hover:text-primary-blue hover:scale-110 ${
               isScrolled ? "text-gray-800" : "text-gray-800"
             } ${isActive ? "text-primary-blue scale-110" : ""}`}
           >

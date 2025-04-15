@@ -60,7 +60,7 @@ export default function MobileNav({
         className="fixed top-0 right-0 bottom-0 w-4/5 max-w-sm bg-white shadow-xl z-30 lg:hidden"
         initial={{ x: "100%" }}
         animate={{ x: isOpen ? 0 : "100%" }}
-        transition={{ type: "tween", duration: 0.4 }}
+        transition={{ type: "tween", duration: 0.3 }}
       >
         <div className="flex flex-col h-full">
           <div className="p-6">

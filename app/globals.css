@@ -2,6 +2,8 @@
 
 @theme {
   --color-primary-blue: hsla(229, 83%, 60%, 1);
+  --color-light-blue: hsla(210, 100%, 96%, 1);
+  --color-heading: hsla(207, 30%, 14%, 1);
 
   --color-overlay: hsla(0, 0%, 0%, 0.5);
 }
