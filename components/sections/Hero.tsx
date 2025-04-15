@@ -5,6 +5,7 @@ import Button from "../UI/Button";
 import Section from "../UI/Section";
 import { LazyMotion, domAnimation, m as motion } from "motion/react";
 import { fadeInUp, staggerContainer } from "../../constants/animations";
+import BlueUnderline from "../UI/BlueUnderline";
 
 export default function HeroSection() {
   return (
@@ -26,7 +27,8 @@ export default function HeroSection() {
             className="w-full md:w-1/2"
           >
             <h1 className="text-heading text-xl leading-[150%] md:text-[32px] md:leading-[140%] lg:text-[54px] lg:leading-[100%] text-center md:text-left font-bold mb-5 md:mb-8 lg:mb-10">
-              Crafting Visual Stories: Unleashing Creative Essence
+              Crafting <BlueUnderline>Visual</BlueUnderline> Stories: Unleashing
+              Creative Essence
             </h1>
             <div className="flex justify-center md:justify-start">
               <Button variant="primary" size="regular">
