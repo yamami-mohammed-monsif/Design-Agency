@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Button from "../UI/Button";
 import Section from "../UI/Section";
-import { motion, MotionProvider } from "@/constants/MotionProvider";
+import { motion, MotionProvider } from "@/components/MotionProvider";
 import { fadeInUp, staggerContainer } from "../../constants/animations";
 import BlueUnderline from "../UI/BlueUnderline";
 
