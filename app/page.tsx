@@ -5,6 +5,7 @@ const HeroSection = dynamic(() => import("../components/sections/Hero"), {
 });
 const About = dynamic(() => import("../components/sections/About"), {
   ssr: true,
+  loading: () => <div className="min-h-[400px]" />,
 });
 
 const page = () => {

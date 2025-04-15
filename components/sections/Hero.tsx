@@ -37,23 +37,20 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          <motion.div
-            variants={fadeInUp}
-            initial="hidden"
-            animate="visible"
-            className="w-full md:w-1/2 -mb-14 md:-mb-17 lg:-mb-23 relative"
-          >
-            <div className="relative h-[291px] sm:h-[320px] md:h-[284px] lg:h-[576px]">
+          <div className="w-full md:w-1/2 -mb-14 md:-mb-17 lg:-mb-23">
+            <div className="relative max-w-[531px] aspect-square rounded-2xl overflow-hidden mx-auto">
               <Image
                 src="/hero-image.webp"
                 alt="Creative designer working at desk"
                 fill
                 priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover rounded-2xl"
+                sizes="(max-width: 768px) 100vw, 531px"
+                className="object-cover"
+                placeholder="blur"
+                blurDataURL="data:image/webp;base64,..."
               />
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </MotionProvider>
     </Section>

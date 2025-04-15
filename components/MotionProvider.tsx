@@ -2,7 +2,7 @@
 // Uses LazyMotion to load only essential animation features
 // Reduces initial bundle size by using the domAnimation feature set
 
-import { LazyMotion, domAnimation, m } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "motion/react";
 
 type MotionProviderProps = {
   children: React.ReactNode;
