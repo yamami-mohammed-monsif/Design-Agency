@@ -8,11 +8,17 @@ const About = dynamic(() => import("../components/sections/About"), {
   loading: () => <div className="min-h-[400px]" />,
 });
 
+const Services = dynamic(() => import("../components/sections/Services"), {
+  ssr: true,
+  loading: () => <div className="min-h-[400px]" />,
+});
+
 const page = () => {
   return (
     <div>
       <HeroSection />
       <About />
+      <Services />
     </div>
   );
 };
