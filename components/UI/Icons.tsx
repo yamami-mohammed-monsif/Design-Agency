@@ -1,8 +1,9 @@
 interface iconProps {
   color?: string;
+  className?: string;
 }
 
-export const ArrowRight = ({ color = "white" }: iconProps) => {
+export const ArrowRight = ({ color = "white", className }: iconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,6 +11,7 @@ export const ArrowRight = ({ color = "white" }: iconProps) => {
       height="20"
       viewBox="0 0 20 20"
       fill="none"
+      className={className}
     >
       <path
         d="M12.025 15.6834C11.8667 15.6834 11.7083 15.6251 11.5833 15.5001C11.3417 15.2584 11.3417 14.8584 11.5833 14.6168L16.2 10.0001L11.5833 5.38343C11.3417 5.14176 11.3417 4.74176 11.5833 4.5001C11.825 4.25843 12.225 4.25843 12.4667 4.5001L17.525 9.55843C17.7667 9.8001 17.7667 10.2001 17.525 10.4418L12.4667 15.5001C12.3417 15.6251 12.1834 15.6834 12.025 15.6834Z"

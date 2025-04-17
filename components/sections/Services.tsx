@@ -42,14 +42,14 @@ export default function ServicesSection() {
 
           <motion.div
             variants={staggerContainer}
-            transition={{ staggerChildren: 0.05 }}
             className="grid grid-cols-2 lg:grid-cols-4 mx-auto gap-5"
           >
-            {displayedServices.map((service) => (
+            {displayedServices.map((service, index) => (
               <motion.div
                 variants={fadeInUp}
+                custom={index}
                 key={service.id}
-                className="relative flex items-end px-2.5 py-4 h-[161px] sm:h-[250px] md:h-[320px] rounded-[6px] overflow-hidden  hover:scale-103 transition-transform duration-500 ease-in-out group"
+                className="relative flex items-end px-2.5 py-4 h-[161px] sm:h-[250px] md:h-[320px] rounded-[6px] overflow-hidden group"
               >
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0">
@@ -74,12 +74,13 @@ export default function ServicesSection() {
                     </p>
                   </div>
 
-                  <Link
-                    href={service.href}
-                    className="flex items-center text-sm font-medium hover:scale-105 hover:underline transition-all duration-300 mt-auto"
-                  >
-                    Request a quote <ArrowRight color="white" />
-                  </Link>
+                  <div className="flex items-center text-sm font-medium group/parent hover:scale-103 transition-all duration-200">
+                    <Link href={service.href}>Request a quote</Link>
+                    <ArrowRight
+                      color="white"
+                      className="group-hover/parent:-rotate-30 transition-transform duration-200 ease-in"
+                    />
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -91,7 +92,12 @@ export default function ServicesSection() {
             className="flex justify-center mt-10 md:mt-[50px] lg:mt-[60px]"
           >
             {!isDesktop ? (
-              <Button variant="primary">View more</Button>
+              <Button
+                variant="primary"
+                onClick={() => setShowAllServices(!showAllServices)}
+              >
+                {showAllServices ? "Show less" : "View more"}
+              </Button>
             ) : (
               <Button variant="primary">Request a Quote</Button>
             )}
