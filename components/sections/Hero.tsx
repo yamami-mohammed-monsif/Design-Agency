@@ -46,8 +46,6 @@ export default function HeroSection() {
                 priority
                 sizes="(max-width: 768px) 100vw, 531px"
                 className="object-cover"
-                placeholder="blur"
-                blurDataURL="data:image/webp;base64,..."
               />
             </div>
           </div>

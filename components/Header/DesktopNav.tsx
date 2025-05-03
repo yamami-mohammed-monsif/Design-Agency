@@ -1,4 +1,3 @@
-// components/Header/DesktopNav.tsx
 "use client";
 import Link from "next/link";
 import { navLinks } from "@/constants";

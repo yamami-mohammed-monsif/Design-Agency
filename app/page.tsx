@@ -13,13 +13,22 @@ const Services = dynamic(() => import("../components/sections/Services"), {
   loading: () => <div className="min-h-[400px]" />,
 });
 
+const Testimonials = dynamic(
+  () => import("../components/sections/Testimonials"),
+  {
+    ssr: true,
+    loading: () => <div className="min-h-[400px]" />,
+  }
+);
+
 const page = () => {
   return (
-    <div>
+    <main>
       <HeroSection />
       <About />
       <Services />
-    </div>
+      <Testimonials />
+    </main>
   );
 };
 

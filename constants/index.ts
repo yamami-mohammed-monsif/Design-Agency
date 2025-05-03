@@ -18,6 +18,7 @@ export const navLinks = [
   { id: 6, href: "#contact", label: "Contact" },
 ];
 
+// services data
 export const services = [
   {
     id: 1,
@@ -75,4 +76,29 @@ export const services = [
     bgImage: "/print-design.webp",
     href: "#",
   },
+];
+
+// testimonilas data
+export const testimonials = [
+  {
+    id: 1,
+    name: "Sarah Johnson",
+    role: "CEO, TechStart",
+    content: "Working with this team transformed our brand identity. Their creative approach and attention to detail exceeded our expectations.",
+    avatar: "/avatar.webp"
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    role: "Marketing Director, Innovate Inc",
+    content: "The landing page they designed for our product launch drove conversion rates beyond our targets. Highly recommended for any digital presence needs.",
+    avatar: "/avatar.webp"
+  },
+  {
+    id: 3,
+    name: "Priya Sharma",
+    role: "Founder, EcoSolutions",
+    content: "From concept to execution, they delivered a website that perfectly captures our brand essence. Their responsive design works flawlessly across all devices.",
+    avatar: "/avatar.webp"
+  }
 ];
