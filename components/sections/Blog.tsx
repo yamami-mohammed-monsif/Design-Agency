@@ -4,6 +4,7 @@ import Section from "../UI/Section";
 import BlueUnderline from "../UI/BlueUnderline";
 import { blogPosts } from "@/constants";
 import BlogPost from "../UI/BlogPost";
+import Button from "../UI/Button";
 import { motion, MotionProvider } from "../MotionProvider";
 import { fadeInUp, staggerContainer } from "@/constants/animations";
 import { useInView } from "motion/react";
@@ -31,6 +32,14 @@ const Blog = () => {
             {blogPosts.map((post) => {
               return <BlogPost key={post.id} {...post} />;
             })}
+          </motion.div>
+          <motion.div
+            variants={fadeInUp}
+            className="mx-auto w-fit mt-10 lg:mt-12"
+          >
+            <Button variant="primary" href="/blog">
+              View all
+            </Button>
           </motion.div>
         </motion.div>
       </MotionProvider>
