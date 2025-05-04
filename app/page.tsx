@@ -21,6 +21,11 @@ const Testimonials = dynamic(
   }
 );
 
+const Contact = dynamic(() => import("../components/sections/Contact"), {
+  ssr: true,
+  loading: () => <div className="min-h-[400px]" />,
+});
+
 const page = () => {
   return (
     <main>
@@ -28,6 +33,7 @@ const page = () => {
       <About />
       <Services />
       <Testimonials />
+      <Contact />
     </main>
   );
 };

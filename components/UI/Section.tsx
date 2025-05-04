@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {
-  id: string;
+  id?: string;
   children: React.ReactNode;
   className?: string;
 }

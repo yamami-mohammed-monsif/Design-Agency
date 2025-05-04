@@ -21,7 +21,7 @@ export default function Button({
   type = "button",
 }: ButtonProps) {
   const baseClasses =
-    "rounded-[8px] text-[18px] leading-[100%] font-bold flex items-center gap-1.5 transition-all duration-200 hover:scale-105 hover:shadow-xl cursor-pointer";
+    "flex items-center justify-center rounded-[8px] text-[18px] leading-[100%] font-bold flex items-center gap-1.5 transition-all duration-200 hover:scale-105 hover:shadow-xl cursor-pointer";
 
   const variantClasses = {
     primary: "bg-primary-blue text-white",
@@ -44,9 +44,9 @@ export default function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes}>
-      <span>{children}</span>
-      <span>{<ArrowRight color="white" />}</span>
+    <button onClick={onClick} className={classes} type={type}>
+      {children}
+      <ArrowRight className="w-6 h-6" />
     </button>
   );
 }

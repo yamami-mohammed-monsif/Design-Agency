@@ -36,19 +36,17 @@ const Testimonials = () => {
 
   return (
     <Section id="testimonials">
-      <div>
-        <h2 className="text-center mb-8">
-          Happy <BlueUnderline>stories</BlueUnderline> of our clients
-        </h2>
-        <MotionProvider>
-          <motion.div
-            ref={ref}
-            className="relative"
-            variants={staggerContainer}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            viewport={{ once: true }}
-          >
+      <MotionProvider>
+        <motion.div
+          ref={ref}
+          variants={staggerContainer}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          <motion.h2 variants={fadeInUp} className="text-center mb-8">
+            Happy <BlueUnderline>stories</BlueUnderline> of our clients
+          </motion.h2>
+          <motion.div className="relative" variants={staggerContainer}>
             {isDesktop ? (
               <div className="flex justify-center gap-6">
                 {testimonials.map((testimonial) => (
@@ -82,7 +80,7 @@ const Testimonials = () => {
                 </AnimatePresence>
 
                 <motion.button
-                  className="absolute -left-3 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-lg"
+                  className="absolute -left-3 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-white rounded-full cursor-pointer shadow-lg"
                   onClick={handlePrev}
                   variants={testimonialCarouselVariants.controls}
                   whileHover={{ scale: 1.1 }}
@@ -92,7 +90,7 @@ const Testimonials = () => {
                 </motion.button>
 
                 <motion.button
-                  className="absolute -right-3 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-lg"
+                  className="absolute -right-3 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-white rounded-full cursor-pointer shadow-lg"
                   onClick={handleNext}
                   variants={testimonialCarouselVariants.controls}
                   whileHover={{ scale: 1.1 }}
@@ -105,7 +103,7 @@ const Testimonials = () => {
                   {testimonials.map((_, index) => (
                     <motion.button
                       key={index}
-                      className={`w-2 h-2 rounded-full ${
+                      className={`w-2 h-2 rounded-full cursor-pointer ${
                         index === currentIndex ? "bg-blue-500" : "bg-gray-300"
                       }`}
                       onClick={() => setCurrentIndex(index)}
@@ -116,8 +114,8 @@ const Testimonials = () => {
               </>
             )}
           </motion.div>
-        </MotionProvider>
-      </div>
+        </motion.div>
+      </MotionProvider>
     </Section>
   );
 };
