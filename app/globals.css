@@ -9,7 +9,7 @@
 }
 
 h2 {
-  @apply text-heading text-2xl leading-[150%] font-bold md:text-[32px] md:leading-[100%] md:text-5xl mb-10 md:mb-[50px] lg:mb-[80px];
+  @apply text-heading text-center text-2xl leading-[150%] font-bold md:text-[32px] md:leading-[100%] md:text-5xl mb-10 md:mb-[50px] lg:mb-[80px];
 }
 
 .paragraph {

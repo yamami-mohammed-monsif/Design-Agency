@@ -26,6 +26,11 @@ const Contact = dynamic(() => import("../components/sections/Contact"), {
   loading: () => <div className="min-h-[400px]" />,
 });
 
+const Blog = dynamic(() => import("../components/sections/Blog"), {
+  ssr: true,
+  loading: () => <div className="min-h-[400px]" />,
+});
+
 const page = () => {
   return (
     <main>
@@ -34,6 +39,7 @@ const page = () => {
       <Services />
       <Testimonials />
       <Contact />
+      <Blog />
     </main>
   );
 };

@@ -43,7 +43,7 @@ const Testimonials = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <motion.h2 variants={fadeInUp} className="text-center mb-8">
+          <motion.h2 variants={fadeInUp}>
             Happy <BlueUnderline>stories</BlueUnderline> of our clients
           </motion.h2>
           <motion.div className="relative" variants={staggerContainer}>

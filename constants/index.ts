@@ -105,3 +105,25 @@ export const testimonials = [
     avatar: "/avatar.webp",
   },
 ];
+
+// blog posts data
+export const blogPosts = [
+  {
+    id: 1,
+    title: "Basic rule of running web agency business",
+    imgSrc: "/blog-post-1.webp",
+    imgAlt: "A man and a woman high-fiving in an office",
+  },
+  {
+    id: 2,
+    title: "Understanding different types of Marketing data",
+    imgSrc: "/blog-post-2.webp",
+    imgAlt: "A man writing on a whiteboard",
+  },
+  {
+    id: 3,
+    title: "Understanding the users need to grow your business",
+    imgSrc: "/blog-post-3.webp",
+    imgAlt: "A hand writing on a whiteboard",
+  },
+];
