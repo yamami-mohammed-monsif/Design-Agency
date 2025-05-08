@@ -43,7 +43,7 @@ const Notifications: React.FC<NotificationsProps> = ({
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -100, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className={`fixed top-1/8 lg:top-5 left-1/2 transform -translate-x-1/2 z-50 w-fit flex items-center px-2 py-1 rounded-lg shadow-lg ${
+            className={`fixed top-1/10 lg:top-5 left-1/2 transform -translate-x-1/2 z-50 w-fit flex items-center px-2 py-1 rounded-lg shadow-lg ${
               type === "success" ? "bg-green-100" : "bg-red-100"
             }`}
           >

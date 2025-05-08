@@ -6,6 +6,7 @@
   --color-heading: hsla(207, 30%, 14%, 1);
   --color-text: hsla(212, 11%, 35%, 1);
   --color-overlay: hsla(0, 0%, 0%, 0.5);
+  --color-footer: hsla(229, 80%, 6%, 1);
 }
 
 h2 {
