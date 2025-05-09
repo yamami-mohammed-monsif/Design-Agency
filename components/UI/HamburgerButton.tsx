@@ -1,6 +1,6 @@
 "use client";
 // import { motion } from "motion/react";
-import { motion, MotionProvider } from "../MotionProvider";
+import { motion, MotionProvider } from "../utils/MotionProvider";
 
 type buttonProps = {
   isOpen: boolean;

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "./Icons";
-import { motion, MotionProvider } from "../MotionProvider";
+import { motion, MotionProvider } from "../utils/MotionProvider";
 import { fadeInUp } from "@/constants/animations";
 
 interface BlogPostProps {

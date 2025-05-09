@@ -5,7 +5,7 @@ import BlueUnderline from "../UI/BlueUnderline";
 import { blogPosts } from "@/constants";
 import BlogPost from "../UI/BlogPost";
 import Button from "../UI/Button";
-import { motion, MotionProvider } from "../MotionProvider";
+import { motion, MotionProvider } from "../utils/MotionProvider";
 import { fadeInUp, staggerContainer } from "@/constants/animations";
 import { useInView } from "motion/react";
 import { useRef } from "react";

@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { useInView, AnimatePresence } from "motion/react";
-import { motion, MotionProvider } from "@/components/MotionProvider";
+import { motion, MotionProvider } from "@/components/utils/MotionProvider";
 import Section from "../UI/Section";
 import BlueUnderline from "../UI/BlueUnderline";
 import { testimonials } from "@/constants";

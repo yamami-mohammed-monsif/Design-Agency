@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import Link from "next/link";
-import { motion, MotionProvider } from "@/components/MotionProvider";
+import { motion, MotionProvider } from "@/components/utils/MotionProvider";
 import { navLinks } from "@/constants";
 
 type MobileNavProps = {

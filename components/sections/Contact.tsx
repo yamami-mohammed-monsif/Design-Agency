@@ -4,7 +4,7 @@ import Section from "../UI/Section";
 import BlueUnderline from "../UI/BlueUnderline";
 import { Location, Phone, Email } from "../UI/Icons";
 import Form from "../ContactForm";
-import { motion, MotionProvider } from "../MotionProvider";
+import { motion, MotionProvider } from "../utils/MotionProvider";
 import { useInView } from "motion/react";
 import { fadeInUp, staggerContainer } from "@/constants/animations";
 import { useRef } from "react";

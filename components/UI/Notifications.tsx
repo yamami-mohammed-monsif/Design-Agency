@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { AnimatePresence } from "motion/react";
-import { motion, MotionProvider } from "../MotionProvider";
+import { motion, MotionProvider } from "../utils/MotionProvider";
 
 interface NotificationsProps {
   message: string;

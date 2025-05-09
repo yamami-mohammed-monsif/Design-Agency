@@ -1,8 +1,11 @@
 import dynamic from "next/dynamic";
+import ClientSections from "./ClientSections";
 
 const HeroSection = dynamic(() => import("../components/sections/Hero"), {
   ssr: true,
+  loading: () => <div className="min-h-[400px]" />,
 });
+
 const About = dynamic(() => import("../components/sections/About"), {
   ssr: true,
   loading: () => <div className="min-h-[400px]" />,
@@ -13,33 +16,13 @@ const Services = dynamic(() => import("../components/sections/Services"), {
   loading: () => <div className="min-h-[400px]" />,
 });
 
-const Testimonials = dynamic(
-  () => import("../components/sections/Testimonials"),
-  {
-    ssr: true,
-    loading: () => <div className="min-h-[400px]" />,
-  }
-);
-
-const Contact = dynamic(() => import("../components/sections/Contact"), {
-  ssr: true,
-  loading: () => <div className="min-h-[400px]" />,
-});
-
-const Blog = dynamic(() => import("../components/sections/Blog"), {
-  ssr: true,
-  loading: () => <div className="min-h-[400px]" />,
-});
-
-const page = () => {
+const page = async () => {
   return (
     <main>
       <HeroSection />
       <About />
       <Services />
-      <Testimonials />
-      <Contact />
-      <Blog />
+      <ClientSections />
     </main>
   );
 };

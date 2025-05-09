@@ -6,8 +6,9 @@ import HamburgerButton from "@/components/UI/HamburgerButton";
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 import { navLinks } from "@/constants";
+import React, { memo } from "react";
 
-export default function Header() {
+const Header = memo(function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -31,32 +32,23 @@ export default function Header() {
       rootMargin: "-100px 0px -100px 0px", // Adjust for header height and to trigger slightly before sections reach the top
     };
 
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry: IntersectionObserverEntry) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
         }
       });
-    };
-
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
+    }, observerOptions);
 
     sectionIds.forEach((id) => {
-      const element = document.getElementById(id);
-      if (element) {
-        observer.observe(element);
-      }
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
     });
 
     return () => {
       sectionIds.forEach((id) => {
-        const element = document.getElementById(id);
-        if (element) {
-          observer.unobserve(element);
-        }
+        const section = document.getElementById(id);
+        if (section) observer.unobserve(section);
       });
     };
   }, []);
@@ -96,4 +88,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+});
+
+export default Header;

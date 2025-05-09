@@ -9,7 +9,7 @@ import Button from "../UI/Button";
 import { services } from "../../constants";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { ArrowRight } from "../UI/Icons";
-import { motion, MotionProvider } from "../MotionProvider";
+import { motion, MotionProvider } from "../utils/MotionProvider";
 import { useInView } from "motion/react";
 import { fadeInUp, staggerContainer } from "@/constants/animations";
 

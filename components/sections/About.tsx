@@ -3,7 +3,7 @@
 import Section from "../UI/Section";
 import BlueUnderline from "../UI/BlueUnderline";
 import Image from "next/image";
-import { motion, MotionProvider } from "@/components/MotionProvider";
+import { motion, MotionProvider } from "@/components/utils/MotionProvider";
 import { fadeInUp, staggerContainer } from "@/constants/animations";
 import { useInView } from "motion/react";
 import { useRef } from "react";
