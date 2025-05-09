@@ -11,15 +11,21 @@ export default function DesktopNav({
   isScrolled,
   activeSection,
 }: DesktopNavProps) {
-  const handleScrollToSection = (
+  const handleScrollToSection = async (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
     e.preventDefault();
-    const section = document.querySelector(href);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    const sectionId = href.startsWith("#") ? href.slice(1) : href; // Remove '#' if present
+
+    // Wait for the section to be available in the DOM
+    let section = document.getElementById(sectionId);
+    while (!section) {
+      await new Promise((resolve) => setTimeout(resolve, 100)); // Retry after 100ms
+      section = document.getElementById(sectionId);
     }
+
+    section.scrollIntoView({ behavior: "smooth" });
   };
 
   return (

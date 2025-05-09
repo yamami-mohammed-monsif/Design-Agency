@@ -43,7 +43,6 @@ export default function HeroSection() {
                 alt="Creative designer working at desk"
                 fill
                 priority
-                placeholder="blur"
                 sizes="(max-width: 768px) 100vw, 531px"
                 className="object-cover"
               />

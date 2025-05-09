@@ -40,16 +40,28 @@ const Header = memo(function Header() {
       });
     }, observerOptions);
 
-    sectionIds.forEach((id) => {
-      const section = document.getElementById(id);
-      if (section) observer.observe(section);
+    const observeSections = () => {
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) observer.observe(section);
+      });
+    };
+
+    observeSections();
+
+    // Re-observe sections when dynamically loaded sections are rendered
+    const mutationObserver = new MutationObserver(() => {
+      observeSections();
     });
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
 
     return () => {
       sectionIds.forEach((id) => {
         const section = document.getElementById(id);
         if (section) observer.unobserve(section);
       });
+      mutationObserver.disconnect();
     };
   }, []);
 
