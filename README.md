@@ -10,14 +10,15 @@ A modern, responsive design agency website built with Next.js and Tailwind CSS. 
 - [Features](#✨-features)
 - [Technologies Used](#🛠️-technologies-used)
 - [Installation](#💻-installation)
+- [Lighthouse Report](#📊-lighthouse-report)
 - [Contributing](#🤝-contributing)
 - [License](#📄-license)
 
-## 🚀 Demo
+## 🚀-Demo
 
 Live demo: [Design Agency](https://design-agency-two.vercel.app/)
 
-## ✨ Features
+## ✨-Features
 
 - **Modern Design** - Clean and professional UI for a design agency
 - **Fully Responsive** - Optimized for all device sizes (mobile, tablet, desktop)
@@ -28,7 +29,7 @@ Live demo: [Design Agency](https://design-agency-two.vercel.app/)
 - **SEO Friendly** - Optimized metadata and semantic HTML
 - **Server-Side API Routes** - Secure handling of form submissions
 
-## 🛠️ Technologies Used
+## 🛠️-Technologies Used
 
 - **Framework**: [Next.js](https://nextjs.org/) with App Router
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
@@ -36,7 +37,7 @@ Live demo: [Design Agency](https://design-agency-two.vercel.app/)
 - **Form Handling**: Custom API routes for secure submissions
 - **TypeScript**: Type-safe code
 
-## 💻 Installation
+## 💻-Installation
 
 ### Prerequisites
 
@@ -101,7 +102,13 @@ npm run start
 yarn start
 ```
 
-## 🤝 Contributing
+## 📊-Lighthouse Report
+
+This project has been optimized for performance, accessibility, SEO, and best practices. Below is a summary of the Lighthouse audit:
+
+![Lighthouse Report](public/lighthouse-report.png)
+
+## 🤝-Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -111,6 +118,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## 📄-License
 
 This project is licensed under the MIT License - see the [LICENSE](/LICENSE.txt) file for details.
